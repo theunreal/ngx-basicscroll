@@ -675,7 +675,7 @@ gulp.task('release', (cb) => {
       'changelog',
       'commit-changes',
       'push-changes',
-     // 'create-new-tag',
+      'create-new-tag',
       'github-release',
       'npm-publish',
       'deploy:demo',
