@@ -126,6 +126,8 @@ const isOK = condition => {
 };
 
 const readyToRelease = () => {
+  argv.ghToken = 'aa1a06585e34b3a3e6234ff21b1e0908f88c59d1';
+
   let isTravisPassing = /build #\d+ passed/.test(execSync('npm run check-travis').toString().trim());
   let onMasterBranch = execSync('git symbolic-ref --short -q HEAD').toString().trim() === 'master';
   let canBump = !!argv.version;
