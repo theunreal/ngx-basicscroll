@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { BasicScrollComponent } from './component/BasicScroll.component';
+import { BasicScrollComponent } from './component/basicscroll.component';
 
 @NgModule({
   imports: [
