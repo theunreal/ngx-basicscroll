@@ -1,3 +1,8 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/theunreal/ngx-basicscroll/compare/v3.0.0...v4.0.0) (2018-03-03)
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/theunreal/ngx-basicscroll/compare/v2.0.0...v3.0.0) (2018-03-03)
 

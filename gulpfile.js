@@ -126,19 +126,19 @@ const isOK = condition => {
 };
 
 const readyToRelease = () => {
-  // let isTravisPassing = /build #\d+ passed/.test(execSync('npm run check-travis').toString().trim());
+  let isTravisPassing = /build #\d+ passed/.test(execSync('npm run check-travis').toString().trim());
   let onMasterBranch = execSync('git symbolic-ref --short -q HEAD').toString().trim() === 'master';
   let canBump = !!argv.version;
   let canGhRelease = argv.ghToken || process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN;
   let canNpmPublish = !!execSync('npm whoami').toString().trim() && execSync('npm config get registry').toString().trim() === 'https://registry.npmjs.org/';
 
-  // gulpUtil.log(`[travis-ci]      Travis build on 'master' branch is passing............................................${isOK(isTravisPassing)}`);
+  gulpUtil.log(`[travis-ci]      Travis build on 'master' branch is passing............................................${isOK(isTravisPassing)}`);
   gulpUtil.log(`[git-branch]     User is currently on 'master' branch..................................................${isOK(onMasterBranch)}`);
   gulpUtil.log(`[npm-publish]    User is currently logged in to NPM Registry...........................................${isOK(canNpmPublish)}`);
   gulpUtil.log(`[bump-version]   Option '--version' provided, with value : 'major', 'minor' or 'patch'.................${isOK(canBump)}`);
   gulpUtil.log(`[github-release] Option '--ghToken' provided or 'CONVENTIONAL_GITHUB_RELEASER_TOKEN' variable set......${isOK(canGhRelease)}`);
 
-  return onMasterBranch && canBump && canGhRelease && canNpmPublish;
+  return isTravisPassing && onMasterBranch && canBump && canGhRelease && canNpmPublish;
 };
 
 const execCmd = (name, args, opts, ...subFolders) => {
@@ -276,7 +276,7 @@ gulp.task('ng-compile',() => {
 
 // Lint, Prepare Build, , Sass to css, Inline templates & Styles and Ng-Compile
 gulp.task('compile', (cb) => {
-  runSequence('pre-compile', 'inline-templates', 'ng-compile', cb);
+  runSequence('lint', 'pre-compile', 'inline-templates', 'ng-compile', cb);
 });
 
 // Build the 'dist' folder (without publishing it to NPM)
