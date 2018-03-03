@@ -1,0 +1,15 @@
+.box {
+  will-change: transform;
+}
+
+.rotateBox { transform: rotate(var(--r)); }
+.fadeBox { opacity: var(--o); }
+.easeX { transform: translateX(var(--tx)); }
+.easeY { transform: translateY(var(--ty)); }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

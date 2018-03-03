@@ -1,0 +1,35 @@
+{
+  "generator-ngx-library": {
+    "version": "5.6.0",
+    "authorName": "Eliran Elnasi",
+    "authorEmail": "eliraneln@gmail.com",
+    "githubUsername": "theunreal",
+    "githubRepoName": "ngx-basicscroll",
+    "projectName": "ngx-basicscroll",
+    "projectVersion": "0.0.1",
+    "projectDescription": "Angular wrapper to Basicscroll",
+    "projectKeywords": [
+      "ng",
+      "angular",
+      "library"
+    ],
+    "ngVersion": "5.0.0",
+    "ngModules": [
+      "core",
+      "common"
+    ],
+    "otherDependencies": [],
+    "dependenciesRange": "^",
+    "ngPrefix": "ngx-bs",
+    "testingFramework": "karma",
+    "useGreenkeeper": true,
+    "useCompodoc": true,
+    "enforceNgGitCommitMsg": true,
+    "exclusions": [
+      "demo/src/jestGlobalMocks.ts",
+      "demo/src/setupJest.ts",
+      "config/jestGlobalMocks.ts",
+      "config/setupJest.ts"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+<div [class.container]="type === 'easeX' || type === 'easeY'">
+  <div #element class="box" [ngClass]="useClass">
+    <ng-content></ng-content>
+  </div>
+</div>
