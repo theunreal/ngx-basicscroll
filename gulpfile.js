@@ -276,7 +276,7 @@ gulp.task('ng-compile',() => {
 
 // Lint, Prepare Build, , Sass to css, Inline templates & Styles and Ng-Compile
 gulp.task('compile', (cb) => {
-  runSequence('lint', 'pre-compile', 'inline-templates', 'ng-compile', cb);
+  runSequence('pre-compile', 'inline-templates', 'ng-compile', cb);
 });
 
 // Build the 'dist' folder (without publishing it to NPM)
@@ -475,6 +475,7 @@ gulp.task('build:doc', (cb) => {
       tsconfig: 'src/tsconfig.lib.json',
       hideGenerator:true,
       disableCoverage: true,
+      disablePrivateOrInternalSupport: true,
       output: `${config.outputDemoDir}/doc/`
     })
   ], cb);
@@ -517,11 +518,11 @@ gulp.task('test:demo', () => {
 });
 
 gulp.task('serve:demo', () => {
-  return execDemoCmd('serve --preserve-symlinks --aot --proxy-config proxy.conf.json', { cwd: `${config.demoDir}` });
+  return execDemoCmd('serve --preserve-symlinks --aot --proxy-config proxy.conf.json --port=4201', { cwd: `${config.demoDir}` });
 });
 
 gulp.task('serve:demo-hmr', () => {
-  return execDemoCmd('serve --hmr -e=hmr --preserve-symlinks --aot --proxy-config proxy.conf.json', { cwd: `${config.demoDir}` });
+  return execDemoCmd('serve --hmr -e=hmr --preserve-symlinks --aot --proxy-config proxy.conf.json --port=4201', { cwd: `${config.demoDir}` });
 });
 
 gulp.task('build:demo', () => {
