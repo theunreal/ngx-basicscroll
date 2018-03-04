@@ -72,6 +72,36 @@ export class OtherModule {
 
 <a href="https://theunreal.github.io/ngx-basicscroll/home" target="_blank"><b>View in Demo</b></a>
 
+### Inputs
+
+<table>
+<tr>
+<th>Input</th><th>Description</th>
+</tr>
+<td>String: 'rotate' | 'fade' | 'translateX' | 'translateY'</td>
+<td>Element animation type</td>
+<tr>
+  <td>fromPosition</td>
+  <td>String: 'top-bottom', 'top-middle', 'middle-middle', etc..</td>
+</tr>
+<tr>
+  <td>toPosition</td>
+  <td>String: 'top-bottom', 'top-middle', 'middle-middle', etc..</td>
+</tr>
+<tr>
+  <td>fromValue</td>
+  <td>Initial value of the CSS property. Depends on the CSS variable you are changing, can be "1turn", "500px", "0.01", etc..</td>
+</tr>
+<tr>
+  <td>fromValue</td>
+  <td>Max value of the CSS property. Depends on the CSS variable you are changing, can be "1turn", "500px", "0.01", etc..</td>
+</tr>
+  <tr>
+    <td>timing</td>
+    <td>String: 'ease-in', 'ease-out', 'sineInOut', 'backInOut', 'expoIn', etc...</td>
+  </tr>
+</table>
+
 
 
 ## License
