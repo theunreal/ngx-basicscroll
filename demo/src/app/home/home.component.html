@@ -2,8 +2,11 @@
 <div style="width: 300px;height: 300px; text-align:center">
   <hr/>
 <bs-element [type]="'rotate'"
-            [from]="'middle-bottom'"
-            [to]="'bottom-top'">
+            [fromPosition]="'middle-bottom'"
+            [toPosition]="'bottom-top'"
+            [fromValue]="0"
+            [toValue]="'1turn'"
+>
   <h2>Rotate this shit!</h2>
   <h3>Did it work ?</h3>
 </bs-element>
