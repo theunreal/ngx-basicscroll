@@ -78,8 +78,8 @@ export class OtherModule {
 <tr>
 <th>Input</th><th>Description</th>
 </tr>
-<td>String: 'rotate' | 'fade' | 'translateX' | 'translateY'</td>
-<td>Element animation type</td>
+<td>Type</td>
+<td>Element animation type. String: 'rotate' | 'fade' | 'translateX' | 'translateY'</td>
 <tr>
   <td>fromPosition</td>
   <td>String: 'top-bottom', 'top-middle', 'middle-middle', etc..</td>
