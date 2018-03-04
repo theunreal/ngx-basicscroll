@@ -70,6 +70,8 @@ export class OtherModule {
 
 ## Usage
 
+<a href="https://theunreal.github.io/ngx-basicscroll/home" target="_blank"><b>View in Demo</b></a>
+
 
 
 ## License
