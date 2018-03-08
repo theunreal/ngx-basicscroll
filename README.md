@@ -2,7 +2,7 @@
   <img height="256px" width="256px" style="text-align: center;" src="https://cdn.rawgit.com/theunreal/ngx-basicscroll/master/demo/src/assets/logo.svg">
 </p>
 
-# ngx-basicscroll - Angular wrapper to Basicscroll
+# ngx-basicscroll - Angular wrapper to [basicScroll](https://github.com/electerious/basicScroll)
 
 [![npm version](https://badge.fury.io/js/ngx-basicscroll.svg)](https://badge.fury.io/js/ngx-basicscroll),
 [![Build Status](https://travis-ci.org/theunreal/ngx-basicscroll.svg?branch=master)](https://travis-ci.org/theunreal/ngx-basicscroll)
@@ -78,7 +78,7 @@ export class OtherModule {
 <tr>
 <th>Input</th><th>Description</th>
 </tr>
-<td>Type</td>
+<td>type</td>
 <td>Element animation type. String: 'rotate' | 'fade' | 'translateX' | 'translateY'</td>
 <tr>
   <td>fromPosition</td>
