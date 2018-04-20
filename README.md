@@ -9,8 +9,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/theunreal/ngx-basicscroll/badge.svg?branch=master)](https://coveralls.io/github/theunreal/ngx-basicscroll?branch=master)
 [![dependency Status](https://david-dm.org/theunreal/ngx-basicscroll/status.svg)](https://david-dm.org/theunreal/ngx-basicscroll)
 [![devDependency Status](https://david-dm.org/theunreal/ngx-basicscroll/dev-status.svg?branch=master)](https://david-dm.org/theunreal/ngx-basicscroll#info=devDependencies)
-[![Greenkeeper Badge](https://badges.greenkeeper.io/theunreal/ngx-basicscroll.svg)](https://greenkeeper.io/)
-
+[
 ## Demo
 
 View all the directives in action at https://theunreal.github.io/ngx-basicscroll
@@ -23,7 +22,7 @@ Install above dependencies via *npm*.
 
 Now install `ngx-basicscroll` via:
 ```shell
-npm install --save ngx-basicscroll
+npm install --save basicscroll ngx-basicscroll
 ```
 
 ---
