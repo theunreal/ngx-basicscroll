@@ -92,7 +92,7 @@ export class OtherModule {
   <td>Initial value of the CSS property. Depends on the CSS variable you are changing, can be "1turn", "500px", "0.01", etc..</td>
 </tr>
 <tr>
-  <td>fromValue</td>
+  <td>toValue</td>
   <td>Max value of the CSS property. Depends on the CSS variable you are changing, can be "1turn", "500px", "0.01", etc..</td>
 </tr>
   <tr>
