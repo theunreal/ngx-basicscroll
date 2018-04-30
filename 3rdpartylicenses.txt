@@ -134,7 +134,7 @@ THE SOFTWARE.
 MIT
 MIT
 
-ngx-basicscroll@1.0.1
+ngx-basicscroll@6.0.1
 MIT
 The MIT License (MIT)
 

@@ -554,8 +554,7 @@ export class BasicScrollComponent implements AfterViewInit {
   constructor(private elRef: ElementRef) {}
 
   ngAfterViewInit() {
-    console.log(this.elRef);
-    this.options.elem &#x3D; this.elRef.nativeElement.parentElement;
+    this.options.elem &#x3D; this.elRef.nativeElement;
     basicScroll.create(this.options).start();
   }
 }

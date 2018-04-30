@@ -347,38 +347,27 @@ export class AppModule {
 export class OtherModule {
 }</code></pre><h2 id="usage">Usage</h2>
 <p><a href="https://theunreal.github.io/ngx-basicscroll/home" target="_blank"><b>View in Demo</b></a></p>
-<h3 id="inputs">Inputs</h3>
-<table>
-<tr>
-<th>Input</th><th>Description</th>
-</tr>
-<td>type</td>
-<td>Element animation type. String: &#39;rotate&#39; | &#39;fade&#39; | &#39;translateX&#39; | &#39;translateY&#39;</td>
-<tr>
-  <td>fromPosition</td>
-  <td>String: &#39;top-bottom&#39;, &#39;top-middle&#39;, &#39;middle-middle&#39;, etc..</td>
-</tr>
-<tr>
-  <td>toPosition</td>
-  <td>String: &#39;top-bottom&#39;, &#39;top-middle&#39;, &#39;middle-middle&#39;, etc..</td>
-</tr>
-<tr>
-  <td>fromValue</td>
-  <td>Initial value of the CSS property. Depends on the CSS variable you are changing, can be &quot;1turn&quot;, &quot;500px&quot;, &quot;0.01&quot;, etc..</td>
-</tr>
-<tr>
-  <td>toValue</td>
-  <td>Max value of the CSS property. Depends on the CSS variable you are changing, can be &quot;1turn&quot;, &quot;500px&quot;, &quot;0.01&quot;, etc..</td>
-</tr>
-  <tr>
-    <td>timing</td>
-    <td>String: &#39;ease-in&#39;, &#39;ease-out&#39;, &#39;sineInOut&#39;, &#39;backInOut&#39;, &#39;expoIn&#39;, etc...</td>
-  </tr>
-</table>
+<pre class="line-numbers"><code class="language-js">&lt;bs-element [options]=&quot;bsOptions&quot; class=&quot;box easeBox&quot;&gt;1&lt;/bs-element&gt;</code></pre><h3 id="example-of-bsoptions-">Example of bsOptions:</h3>
+<pre class="line-numbers"><code class="language-json">  {
+    from: &#39;middle-bottom&#39;,
+    to: &#39;bottom-top&#39;,
+    direct: true,
+    props: {
+      &#39;--ty&#39;: {
+        from: &#39;0&#39;,
+        to: &#39;100px&#39;,
+        timing: &#39;circIn&#39;
+      }
+    }
+  }</code></pre><h3 id="example-scss-">Example SCSS:</h3>
+<pre class="line-numbers"><code class="language-css">.box {
+  padding: 1em 2em;
+  margin: 0 .5em;
+  background: #ddd;
+  will-change: transform;
+}
 
-
-
-<h2 id="license">License</h2>
+.easeBox { transform: translateY(var(--ty)); }</code></pre><h2 id="license">License</h2>
 <p>Copyright (c) 2018 Eliran Elnasi. Licensed under the MIT License (MIT)</p>
 
 
