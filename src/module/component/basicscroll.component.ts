@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 declare const require;
-const basicScroll = require('basicScroll');
+const basicScroll = require('basicscroll');
 
 
 @Component({
