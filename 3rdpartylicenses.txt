@@ -110,7 +110,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
-ngx-basicscroll@0.1.0
+ngx-basicscroll@0.1.2
 MIT
 The MIT License (MIT)
 
