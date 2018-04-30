@@ -1,5 +1,5 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
-import {BsOptions} from '../basicscroll';
+import {AfterViewInit, Component, ElementRef, Input} from '@angular/core';
+import {BsOptions} from './bsOptions.interface';
 declare const require;
 const basicScroll = require('basicscroll');
 

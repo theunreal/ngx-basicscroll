@@ -1,5 +1,5 @@
 export interface BsOptions {
-  elem: any;
+  elem?: any;
   from: string;
   to: string;
   direct?: boolean;
