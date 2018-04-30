@@ -20,10 +20,6 @@ body {
   will-change: transform;
 }
 
-.box::before {
-  content: attr(data-timing);
-}
-
 .easeBox { transform: translateY(var(--ty)); }
 .rotateBox { transform: rotate(var(--r)); }
 .fadeBox { opacity: var(--o); }

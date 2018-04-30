@@ -71,36 +71,37 @@ export class OtherModule {
 
 <a href="https://theunreal.github.io/ngx-basicscroll/home" target="_blank"><b>View in Demo</b></a>
 
-### Inputs
+```js
+<bs-element [options]="bsOptions" class="box easeBox">1</bs-element>
+```
 
-<table>
-<tr>
-<th>Input</th><th>Description</th>
-</tr>
-<td>type</td>
-<td>Element animation type. String: 'rotate' | 'fade' | 'translateX' | 'translateY'</td>
-<tr>
-  <td>fromPosition</td>
-  <td>String: 'top-bottom', 'top-middle', 'middle-middle', etc..</td>
-</tr>
-<tr>
-  <td>toPosition</td>
-  <td>String: 'top-bottom', 'top-middle', 'middle-middle', etc..</td>
-</tr>
-<tr>
-  <td>fromValue</td>
-  <td>Initial value of the CSS property. Depends on the CSS variable you are changing, can be "1turn", "500px", "0.01", etc..</td>
-</tr>
-<tr>
-  <td>toValue</td>
-  <td>Max value of the CSS property. Depends on the CSS variable you are changing, can be "1turn", "500px", "0.01", etc..</td>
-</tr>
-  <tr>
-    <td>timing</td>
-    <td>String: 'ease-in', 'ease-out', 'sineInOut', 'backInOut', 'expoIn', etc...</td>
-  </tr>
-</table>
+### Example of bsOptions:
+```json
+  {
+    from: 'middle-bottom',
+    to: 'bottom-top',
+    direct: true,
+    props: {
+      '--ty': {
+        from: '0',
+        to: '100px',
+        timing: 'circIn'
+      }
+    }
+  }
+```
 
+### Example SCSS:
+```css
+.box {
+  padding: 1em 2em;
+  margin: 0 .5em;
+  background: #ddd;
+  will-change: transform;
+}
+
+.easeBox { transform: translateY(var(--ty)); }
+```
 
 
 ## License
