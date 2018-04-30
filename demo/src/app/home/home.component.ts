@@ -8,40 +8,29 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
 
-  examples: any[] = [{
-    name: 'Rotate',
-    code: `<bs-element [type]="'rotate'"
-                  [fromPosition]="'top-middle'"
-                  [toPosition]="'top-top'"
-                  [fromValue]="0"
-                  [toValue]="'1turn'">
-        <h2>Rotate</h2>
-      </bs-element>`
-  }, {
-    name: 'Fade',
-    code: `<bs-element [type]="'fade'"
-                  [fromPosition]="'bottom-bottom'"
-                  [toPosition]="'top-middle'"
-                  [fromValue]="0"
-                  [toValue]="'1turn'">
-               Fade
-        </bs-element>`
-  }, {
-    name: 'translateX',
-    code: `
-    <bs-element [type]="'translateX'"
-                  [fromPosition]="'bottom-bottom'"
-                  [toPosition]="'top-middle'"
-                  [fromValue]="0"
-                  [toValue]="'400px'"></bs-element>
-                  translateX
-    `
-  }];
+  easeBoxesOptions: any[] = [];
+  timings = ['sineInOut', 'backInOut', 'circIn', 'quintOut', 'expoIn'];
 
-  constructor(private titleService: Title) { }
+  constructor(private titleService: Title) {
+  }
 
   ngOnInit() {
     this.titleService.setTitle('ngx-basicscroll!');
-  }
 
+    Array.from(document.querySelectorAll('.easeBox'))
+      .forEach((elem, i) => {
+        this.easeBoxesOptions.push({
+          from: 'middle-bottom',
+          to: 'bottom-top',
+          direct: true,
+          props: {
+            '--ty': {
+              from: '0',
+              to: '100px',
+              timing: this.timings[i]
+            }
+          }
+        });
+      });
+  }
 }

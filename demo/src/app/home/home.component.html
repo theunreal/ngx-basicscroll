@@ -1,42 +1,18 @@
-<div style="width: 100%; text-align:center">
-  Scroll down to see basicscroll in action!
-    <div style="height: 550px"></div>
-    <div class="container">
-      <article *ngFor="let example of examples; let i=index">
-        <code>
-          {{example.code}}
-        </code>
-        <section [ngSwitch]="i">
-          <bs-element *ngSwitchCase="0"
-                      [type]="'rotate'"
-                      [fromPosition]="'top-middle'"
-                      [toPosition]="'top-top'"
-                      [fromValue]="0"
-                      [toValue]="'1turn'">
-            <h2>Rotate text</h2>
-          </bs-element>
-          <div style="height: 200px" *ngSwitchCase="1">
-          <bs-element [type]="'fade'"
-                      [fromPosition]="'top-middle'"
-                      [toPosition]="'top-top'"
-                      [fromValue]=".01"
-                      [toValue]=".99">
-            <h2>Fade text</h2>
-          </bs-element>
-          </div>
+<div class="container">
 
-          <div style="height: 200px" *ngSwitchCase="2">
-            <bs-element [type]="'translateX'"
-                        [fromPosition]="'top-middle'"
-                        [toPosition]="'top-top'"
-                        [fromValue]="0"
-                        [toValue]="'400px'">
-              <h2>translateX text</h2>
-            </bs-element>
-          </div>
+  <bs-element [options]="easeBoxesOptions[0]" class="box easeBox">1</bs-element>
+  <bs-element [options]="easeBoxesOptions[1]" class="box easeBox"></bs-element>
+  <bs-element [options]="easeBoxesOptions[2]" class="box easeBox"></bs-element>
+  <bs-element [options]="easeBoxesOptions[3]" class="box easeBox"></bs-element>
 
-        </section>
-      </article>
-    </div>
-    <div style="height: 800px"></div>
+    <bs-element
+      *ngFor="let box of easeBoxesOptions; let i=index"
+      [options]="easeBoxesOptions[i]" class="box easeBox">
+      {{timings[i]}}
+    </bs-element>
+</div>
+
+<div class="container">
+  <div class="box rotateBox">rotate</div>
+  <div class="box fadeBox">fade</div>
 </div>
