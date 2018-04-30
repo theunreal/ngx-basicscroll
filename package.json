@@ -1,7 +1,7 @@
 {
   "name": "ngx-basicscroll",
   "description": "Angular wrapper to Basicscroll",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/theunreal/ngx-basicscroll",
   "author": {
     "name": "Eliran Elnasi",

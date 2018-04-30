@@ -1,5 +1,5 @@
-<a name="0.1.4"></a>
-## [0.1.4](https://github.com/theunreal/ngx-basicscroll/compare/v0.1.3...v0.1.4) (2018-04-30)
+<a name="0.1.5"></a>
+## [0.1.5](https://github.com/theunreal/ngx-basicscroll/compare/v0.1.3...v0.1.5) (2018-04-30)
 
 
 
