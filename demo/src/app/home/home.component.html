@@ -1,14 +1,8 @@
 <div class="container">
-
-  <bs-element [options]="easeBoxesOptions[0]" class="box easeBox">1</bs-element>
-  <bs-element [options]="easeBoxesOptions[1]" class="box easeBox"></bs-element>
-  <bs-element [options]="easeBoxesOptions[2]" class="box easeBox"></bs-element>
-  <bs-element [options]="easeBoxesOptions[3]" class="box easeBox"></bs-element>
-
     <bs-element
-      *ngFor="let box of easeBoxesOptions; let i=index"
-      [options]="easeBoxesOptions[i]" class="box easeBox">
-      {{timings[i]}}
+      *ngFor="let box of boxes;"
+      [options]="easeBoxesOptions[box]" class="box easeBox">
+      {{timings[box]}}
     </bs-element>
 </div>
 

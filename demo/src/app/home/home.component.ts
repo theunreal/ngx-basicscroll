@@ -8,7 +8,9 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
 
+  boxes = [0, 1, 2, 3, 4];
   easeBoxesOptions: any[] = [];
+  loaded = false;
   timings = ['sineInOut', 'backInOut', 'circIn', 'quintOut', 'expoIn'];
 
   constructor(private titleService: Title) {
@@ -17,8 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.titleService.setTitle('ngx-basicscroll!');
 
-    Array.from(document.querySelectorAll('.easeBox'))
-      .forEach((elem, i) => {
+    this.boxes.forEach((box) => {
         this.easeBoxesOptions.push({
           from: 'middle-bottom',
           to: 'bottom-top',
@@ -27,10 +28,11 @@ export class HomeComponent implements OnInit {
             '--ty': {
               from: '0',
               to: '100px',
-              timing: this.timings[i]
+              timing: this.timings[box]
             }
           }
         });
       });
+    this.loaded = true;
   }
 }
