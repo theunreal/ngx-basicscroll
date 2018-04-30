@@ -76,7 +76,7 @@ export class OtherModule {
 ```
 
 ### Example of bsOptions:
-```json
+```js
   {
     from: 'middle-bottom',
     to: 'bottom-top',
