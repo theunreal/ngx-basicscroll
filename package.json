@@ -99,7 +99,7 @@
     "raw-loader": "0.5.1",
     "source-map-loader": "0.2.2",
     "travis-status": "2.0.0",
-    "lodash": "4.17.4",
+    "lodash": "4.17.13",
     "yargs": "10.0.3"
   },
   "engines": {
