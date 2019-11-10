@@ -3,5 +3,6 @@ export interface BsOptions {
   from: string;
   to: string;
   direct?: boolean;
+  track?: boolean;
   props: any;
 }
